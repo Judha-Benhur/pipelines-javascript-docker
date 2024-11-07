@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: judhabenhurpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: judhabenhurpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: judhabenhurpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: judhabenhurpipelinesjavascriptdocker 
+          image: myjbcontainerregistry.azurecr.io/judhabenhurpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
